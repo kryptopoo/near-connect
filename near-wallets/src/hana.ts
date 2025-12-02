@@ -51,7 +51,7 @@ const hanaWallet = async () => {
       try {
         await checkExist();
 
-        const signedMessage = await hana("signMessage", message, recipient, nonce.toString("base64"));
+        const signedMessage = await hana("signMessage", message, recipient, Buffer.from(nonce).toString("base64"));
         return signedMessage;
       } catch (error) {
         throw new Error("sign Error");

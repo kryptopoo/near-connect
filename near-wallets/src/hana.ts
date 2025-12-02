@@ -51,7 +51,7 @@ const hanaWallet = async () => {
       try {
         await checkExist();
 
-        const signedMessage = await hana("signMessage", message);
+        const signedMessage = await hana("signMessage", message, recipient);
         return signedMessage;
       } catch (error) {
         throw new Error("sign Error");

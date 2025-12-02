@@ -47,11 +47,11 @@ const hanaWallet = async () => {
       throw new Error(`Method not supported by Hana Wallet`);
     },
 
-    async signMessage({ message, nonce, recipient, state }: any) {
+    async signMessage({ message, recipient, nonce }: any) {
       try {
         await checkExist();
 
-        const signedMessage = await hana("signMessage", message, recipient);
+        const signedMessage = await hana("signMessage", message, recipient, nonce.toString("base64"));
         return signedMessage;
       } catch (error) {
         throw new Error("sign Error");

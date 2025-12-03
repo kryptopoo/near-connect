@@ -254,6 +254,32 @@
         "signAndSendTransactions": true,
         "testnet": true
       }
+    },
+    {
+      "id": "hana-wallet",
+      "name": "Hana Wallet",
+      "icon": "https://lh3.googleusercontent.com/sS35MenCNWhb_6Qv3lqdIsAfpxH0i7VhxMR3XNYqGswnkOYepaRmHiNzEiTyY_4ZiW0b650eyz4Wz1Sup6OYKKS6yB4=s120",
+      "description": "Hana Wallet is a powerful, yet simple-to-use cryptocurrency wallet available as both a mobile app and a desktop extension.",
+      "website": "https://www.hana.money",
+      "version": "1.0.0",
+      "executor": "https://raw.githubusercontent.com/kryptopoo/near-connect/refs/heads/feat/hana-wallet-integration/repository/hana.js",
+      "type": "sandbox",
+      "platform": {
+        "web": "https://www.hana.money",
+        "chrome": "https://chromewebstore.google.com/detail/hana-wallet/jfdlamikmbghhapbgfoogdffldioobgl",
+        "android": "https://play.google.com/store/apps/details?id=com.HanaTech.Wallet",
+        "ios": "https://apps.apple.com/vn/app/hana-wallet/id6447821572"
+      },
+      "permissions": {
+        "storage": true,
+        "external": ["hanaWallet.near"],
+        "allowsOpen": ["https://www.hana.money", "https://chromewebstore.google.com/detail/hana-wallet/jfdlamikmbghhapbgfoogdffldioobgl"]
+      },
+      "features": {
+        "signMessage": true,
+        "signAndSendTransaction": true,
+        "signAndSendTransactions": true
+      }
     }
   ]
 }
